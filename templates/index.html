@@ -14,20 +14,20 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
       <!-- style css -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
       <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css')}}">
       <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link rel="icon" href="{{ url_for('static', filename='images/fevicon.png')}}" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.mCustomScrollbar.min.css')}}">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <!-- owl stylesheets --> 
-      <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css')}}">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
    <body>
@@ -42,24 +42,22 @@
                <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                      <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="{{ url_for('home')}}">Home</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="index.html">Books</a>
+                        <a class="nav-link" href="{{url_for('books')}}">Books</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link" href="{{ url_for('about_us')}}">About Us</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
+                        <a class="nav-link" href="{{url_for('gallery')}}">Gallery</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
+                        <a class="nav-link" href="{{url_for('services')}}">Services</a>
                      </li>
                     
-                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                     </li>
+                     
                   </ul>
                </div>
             </nav>
@@ -76,7 +74,7 @@
                               <h1 class="coffee_text">El mundo</h1>
                               <h1 class="coffee_text">de las Letras</h1>
                               <p class="there_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, </p>
-                              <div class="learnmore_bt"><a href="#">Learn More</a></div>
+                              <div class="learnmore_bt"><a href="{{url_for('about_us')}}">Learn More</a></div>
                            </div>
                         </div>
                      </div>
@@ -93,11 +91,11 @@
                      <div class="about_taital">About Us</div>
                      <p class="about_text">Un hombre llamado Alejandro, apasionado por los libros desde su infancia. Después de años de trabajar en la industria editorial, decidió seguir su sueño de abrir su propia librería. Con determinación y visión, Alejandro transformó un antiguo edificio en el corazón de la ciudad en un refugio para los amantes de la lectura. Ahora quiere empezar con un nuevo mercado y es la venta online.</p>
                      
-                     <div class="read_bt"><a href="#">Read More</a></div>
+                     <div class="read_bt"><a href="{{url_for('books')}}">Read More</a></div>
                   </div>
                </div>
                <div class="col-md-6">
-                  <div class="about_img"><img src="images/about-img.png"></div>
+                  <div class="about_img"><img src="{{ url_for('static', filename='images/about-img.png')}}"></div>
                </div>
             </div>
          </div>
@@ -118,7 +116,7 @@
                   <div class="row">
                      <div class="col-md-4">
                         <div class="container_main">
-                           <img src="images/person-book.jpg" alt="Avatar" class="image">
+                           <img src="{{ url_for('static', filename='images/person-book.jpg')}}" alt="Avatar" class="image">
                            <div class="overlay">
                               <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                            </div>
@@ -126,7 +124,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="container_main">
-                           <img src="images/book1.jpg" alt="Avatar" class="image">
+                           <img src="{{ url_for( 'static', filename='images/book1.jpg')}}" alt="Avatar" class="image">
                            <div class="overlay">
                               <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                            </div>
@@ -134,7 +132,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="container_main">
-                           <img src="images/book2.jpg" alt="Avatar" class="image">
+                           <img src="{{ url_for('static', filename='images/book2.jpg')}}" alt="Avatar" class="image">
                            <div class="overlay">
                               <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                            </div>
@@ -146,7 +144,7 @@
                   <div class="row">
                      <div class="col-md-4">
                         <div class="container_main">
-                           <img src="images/img-4.png" alt="Avatar" class="image">
+                           <img src="{{ url_for('static', filename='images/img-4.png')}}" alt="Avatar" class="image">
                            <div class="overlay">
                               <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                            </div>
@@ -154,7 +152,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="container_main">
-                           <img src="images/img-5.png" alt="Avatar" class="image">
+                           <img src="{{ url_for('static', filename='images/img-5.png')}}" alt="Avatar" class="image">
                            <div class="overlay">
                               <div class="overlay">
                                  <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
@@ -164,7 +162,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="container_main">
-                           <img src="images/img-6.png" alt="Avatar" class="image">
+                           <img src="{{ url_for('static', filename='images/img-6.png')}}" alt="Avatar" class="image">
                            <div class="overlay">
                               <div class="overlay">
                                  <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
@@ -178,7 +176,7 @@
                   <div class="row">
                      <div class="col-md-4">
                         <div class="container_main">
-                           <img src="images/img-7.png" alt="Avatar" class="image">
+                           <img src="{{ url_for('static', filename='images/img-7.png')}}" alt="Avatar" class="image">
                            <div class="overlay">
                               <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                            </div>
@@ -186,7 +184,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="container_main">
-                           <img src="images/img-8.png" alt="Avatar" class="image">
+                           <img src="{{ url_for('static', filename='images/img-8.png')}}" alt="Avatar" class="image">
                            <div class="overlay">
                               <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                            </div>
@@ -194,7 +192,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="container_main">
-                           <img src="images/img-9.png" alt="Avatar" class="image">
+                           <img src="{{ url_for('static', filename='images/img-9.png')}}" alt="Avatar" class="image">
                            <div class="overlay">
                               <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                            </div>
@@ -203,59 +201,11 @@
                   </div>
                </div>
             </div>
-            <div class="seemore_bt"><a href="#">See More</a></div>
+            <div class="seemore_bt"><a href="{{ url_for('books')}}">See More</a></div>
          </div>
       </div>
       <!-- gallery section end -->
-      <!-- services section start -->
-      <div class="services_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <h1 class="services_taital">Services</h1>
-                  <p class="services_text">Typesetting industry lorem Ipsum is simply dummy text of the </p>
-               </div>
-            </div>
-            <div class="services_section_2">
-               <div class="row">
-                  <div class="col-lg-4 col-sm-12 col-md-4">
-                     <div class="box_main active">
-                        <div class="house_icon">
-                           <img src="images/icon1.png" class="image_1">
-                           <img src="images/icon1.png" class="image_2">
-                        </div>
-                        <h3 class="decorate_text">Original Coffee</h3>
-                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                        <div class="readmore_bt"><a href="#">Read More</a></div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4 col-sm-12 col-md-4">
-                     <div class="box_main">
-                        <div class="house_icon">
-                           <img src="images/icon2.png" class="image_1">
-                           <img src="images/icon2.png" class="image_2">
-                        </div>
-                        <h3 class="decorate_text">20 Coffee Flavors</h3>
-                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                        <div class="readmore_bt"><a href="#">Read More</a></div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4 col-sm-12 col-md-4">
-                     <div class="box_main">
-                        <div class="house_icon">
-                           <img src="images/icon3.png" class="image_1">
-                           <img src="images/icon3.png" class="image_2">
-                        </div>
-                        <h3 class="decorate_text">Pleasant Abient</h3>
-                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                        <div class="readmore_bt"><a href="#">Read More</a></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- services section end -->
+      
       <!-- testimonial section start -->
       <div class="client_section layout_padding">
          <div class="container">
@@ -279,7 +229,7 @@
                    <div class="row">
                       <div class="col-md-12">
                          <div class="testimonial_section_2">
-                            <h4 class="client_name_text">Monila <span class="quick_icon"><img src="images/quick-icon.png"></span></h4>
+                            <h4 class="client_name_text">Monila <span class="quick_icon"><img src="{{ url_for('static', filename='images/quick-icon.png')}}"></span></h4>
                             <p class="customer_text">many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All themany variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some embarrassing hidden in the middle of text. All the</p>
                          </div>
                       </div>
@@ -293,7 +243,7 @@
                    <div class="row">
                       <div class="col-md-12">
                          <div class="testimonial_section_2">
-                            <h4 class="client_name_text">Monila <span class="quick_icon"><img src="images/quick-icon.png"></span></h4>
+                            <h4 class="client_name_text">Monila <span class="quick_icon"><img src="{{ url_for('static', filename='images/quick-icon.png')}}"></span></h4>
                             <p class="customer_text">many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All themany variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some embarrassing hidden in the middle of text. All the</p>
                          </div>
                       </div>
@@ -307,7 +257,7 @@
                    <div class="row">
                       <div class="col-md-12">
                          <div class="testimonial_section_2">
-                            <h4 class="client_name_text">Monila <span class="quick_icon"><img src="images/quick-icon.png"></span></h4>
+                            <h4 class="client_name_text">Monila <span class="quick_icon"><img src="{{ url_for('static', filename='images/quick-icon.png')}}"></span></h4>
                             <p class="customer_text">many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All themany variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some embarrassing hidden in the middle of text. All the</p>
                          </div>
                       </div>
@@ -336,17 +286,17 @@
                      <ul>
                         <li>
                            <a href="#">
-                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Loram Ipusm</span>
+                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Carrera 108 #58-53, Medellin, Colombia</span>
                            </a>
                         </li>
                         <li>
                            <a href="#">
-                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call : +01 1234567890</span>
+                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call : +57 3214567890</span>
                            </a>
                         </li>
                         <li>
                            <a href="#">
-                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : demo@elmundodelasletras.com</span>
+                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : servicio@elmundodelasletras.com</span>
                            </a>
                         </li>
                      </ul>
@@ -364,13 +314,13 @@
       </div>
       <!-- copyright section end -->
       <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
+      <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+      <script src="{{ url_for('static', filename='js/popper.min.js')}}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+      <script src="{{ url_for('static', filename='js/jquery-3.0.0.min.js')}}"></script>
+      <script src="{{ url_for('static', filename='js/plugin.js')}}"></script>
       <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>     
+      <script src="{{ url_for('static', filename='js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+      <script src="{{ url_for('static', filename='js/custom.js')}}"></script>     
    </body>
 </html>
