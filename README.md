@@ -3,6 +3,7 @@
 ## I'm going to deploy the next cloud architecture on AWS
 ![arquitectura aws](img/EC2-RDS.svg)
 
+<hr>
 1. I'm going to create the network architecture using the AWS VPC Service.
    - I create a VPC with the next IPv4 CIDR Block
      - 192.168.0.0/16
