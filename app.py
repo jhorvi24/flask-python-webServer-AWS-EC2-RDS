@@ -45,11 +45,11 @@ def about_us():
 
 @app.route('/gallery')
 def gallery():
-    render_template("gallery.html")
+    return render_template("gallery.html")
 
 @app.route('/services')
 def services():
-    render_template("services.html")
+    return render_template("services.html")
 
 if __name__=='__main__':
 	app.run(host='0.0.0.0')
