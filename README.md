@@ -5,7 +5,7 @@
 
 <hr>
 1. I'll build the network architecture using the AWS VPC service.
-   - I'm going to create a VPC with the following IPv4 CIDR Block
+- I'm going to create a VPC with the following IPv4 CIDR Block
      - 192.168.0.0/16
     
    - I will create the three subnets with the next names:
