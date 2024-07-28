@@ -40,8 +40,8 @@
          - SSMFullAccess           
 
 
-      
-2. I going to the EC2 service and I launch an EC2 instance in the **PublicSubnet** with the next configurations
+
+3. I going to the EC2 service and I launch an EC2 instance in the **PublicSubnet** with the next configurations
   - 
 
     
