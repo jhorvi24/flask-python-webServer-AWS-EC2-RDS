@@ -34,7 +34,7 @@
       - /book/user: root
       - /book/password: *Test!2024* using the *SecureString* type
       - /book/database: books_db
-      - /book/host: 192.168.1.23 *The IP address where the database is located. When creating the database on RDS I need to change this IP address to the endpoint provided by RDS.
+      - /book/host: 192.168.1.23 *The IP address where the database is located. When creating the database on RDS I need to change this IP address to the endpoint provided by RDS*.
       
    - The web server will run in the EC2 instance and it needs to read the connection parameters to the database deployed on RDS, so I need to create an IAM role that has permission to EC2 to read the connection parameters from the System Manager service.
       - In the IAM service I create a role named *ec2RoleSSM*.
