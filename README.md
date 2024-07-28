@@ -53,7 +53,7 @@
         - Create a Security Group
      - Advanced details:
         - IAM instance profile: Associate the role created previously
-        - User data: *copy the next lines in user data
+        - User data: *copy the next lines in user data*
            ```
            #!/bin/bash
             sudo dnf install -y python3.9-pip
