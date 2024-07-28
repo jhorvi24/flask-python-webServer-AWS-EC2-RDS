@@ -29,6 +29,7 @@
 
 <hr>
 2. I'll use the AWS System Manager service to store the connection parameters that the web server will use to connect to the database configured on AWS RDS.
+
    - Using AWS System Manager with Parameter Store I create the following parameters:
       - /book/user: root
       - /book/password: *Test!2024* using the *SecureString* type
