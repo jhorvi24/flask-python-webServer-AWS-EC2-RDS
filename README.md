@@ -5,7 +5,7 @@
 
 <hr>
 1. I'll build the network architecture using the AWS VPC service.
-   -I'm going to create a VPC with the following IPv4 CIDR Block
+   - I'm going to create a VPC with the following IPv4 CIDR Block
      - 192.168.0.0/16
     
    - I will create the three subnets with the next names:
@@ -27,7 +27,7 @@
    - In the Route Table I associate with the **Public Subnet** and I create a route for allow to connect to the Internet through the **Internet Gateway**  
 
 <hr>
-2. I'll use the AWS System Manager service to store the connection parameters that the web server will use to connect to the database configured on AWS RDS.  
+2. I'll use the AWS System Manager service to store the connection parameters that the web server will use to connect to the database configured on AWS RDS.
    - Using AWS System Manager with Parameter Store I create the following parameters:
       - /book/user: root
       - /book/password: *Test!2024* using the *SecureString* type
