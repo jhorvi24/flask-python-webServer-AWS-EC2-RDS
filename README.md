@@ -41,10 +41,32 @@
       - The Role has the following permission:
          - SSMFullAccess           
 
-
+<hr>
 
 3. I going to the EC2 service and I launch an EC2 instance in the **PublicSubnet** with the next configurations
-  - 
+     - AMI: *Amazon Linux 2023*
+     - Instance Type: *t2.micro*
+     - Key Pair: associate a key pair
+     - Network settings:
+        - VPC
+        - Public Subnet: enable *Public IP*
+        - Create a Security Group
+     - Advanced details:
+        - IAM instance profile: Associate the role created previously
+        - User data:
+           ```
+           #!/bin/bash
+sudo dnf install -y python3.9-pip
+pip install virtualenv
+sudo dnf install -y mariadb105-server
+sudo service mariadb start
+sudo chkconfig mariadb on
+pip install flask
+pip install mysql-connector-python
+pip install boto3
+
+```
+         
 
     
    
