@@ -53,19 +53,18 @@
         - Create a Security Group
      - Advanced details:
         - IAM instance profile: Associate the role created previously
-        - User data:
+        - User data: *copy the next lines in user data
            ```
            #!/bin/bash
-sudo dnf install -y python3.9-pip
-pip install virtualenv
-sudo dnf install -y mariadb105-server
-sudo service mariadb start
-sudo chkconfig mariadb on
-pip install flask
-pip install mysql-connector-python
-pip install boto3
-
-```
+            sudo dnf install -y python3.9-pip
+            pip install virtualenv
+            sudo dnf install -y mariadb105-server
+            sudo service mariadb start
+            sudo chkconfig mariadb on
+            pip install flask
+            pip install mysql-connector-python
+            pip install boto3
+            ```
          
 
     
