@@ -42,15 +42,28 @@
          - SSMFullAccess           
 
 <hr>
-
-3. I going to the EC2 service and I launch an EC2 instance in the **PublicSubnet** with the next configurations
+3. I going to the AWS EC2 service and I create two security group.
+      - The first security group has the next parameters:
+         - Name: web-server-SG
+         - Inboud rules:
+            - Type: Custom TCP
+            - Port Range: 5000
+            - Source: Anywhere
+       - The second security group has the next parameters:
+         - Name: database-SG
+         - Inboud rules:
+            - Type: MYSQL/Aurora
+            - Port Range: 3306
+            - Source: web-server-SG (*The SG of the web server*)
+<hr>
+4. I going to the AWS EC2 service and I launch an EC2 instance in the **PublicSubnet** with the next configurations
      - AMI: *Amazon Linux 2023*
      - Instance Type: *t2.micro*
      - Key Pair: associate a key pair
      - Network settings:
         - VPC
         - Public Subnet: enable *Public IP*
-        - Create a Security Group
+        - Associate the web server security group
      - Advanced details:
         - IAM instance profile: Associate the role created previously
         - User data: *copy the next following lines to the user data*
@@ -71,11 +84,23 @@
            ``` python3 -m virtualenv venv
                source venv/bin/activate
                python app.py ```
+      - The database is not configured. 
       - The database is not configured in AWS RDS. So in the next step, I'm going to configure AWS RDS.
    <hr>
-   4. I'm going to the AWS RDS to configure the relational database service.
-      - I create a subnet group for privateSubnetA and privateSubnetB.
-      - 
+5. I'm going to the AWS RDS to configure the relational database service.
+         - I create a subnet group for privateSubnetA and privateSubnetB.
+         - I create AWS RDS with the next parameters:
+            - Engine Type: MariaDB or MySQL
+            - Templates: Free tier
+            - Master username: the same user that you created in AWS System Manager
+            - Master Password: the same password that you created in AWS System Manager.
+            - Virtual Private Cloud (VPC): the VPC that was created in the step one. 
+            - DB subnet group: the db subnet group created. 
+            - Existing VPC security groups:
+               - Associate the database security group create in the step three.
+
+            - When AWS RDS is finally created, I copy the RDS endpoint. You can update the /book/host parameter in AWS System Manager.
+6. In this step
               
        
          
