@@ -61,6 +61,7 @@
             - Port Range: 3306
             - Source: web-server-SG *The SG of the web server*
 <hr>
+
 4. I going to the AWS EC2 service and I launch an EC2 instance in the **PublicSubnet** with the next configurations
      - AMI: *Amazon Linux 2023*
      - Instance Type: *t2.micro*
@@ -84,7 +85,7 @@
            pip install boto3
             ```
       - When the instance launch is finished, I connect to the terminal, and I clone this project using the respective URL:
-           ```sh git clone *URL** ```
+           ```git clone URL```
       - To run the web server, I run the next command in the directory where the app.py is located. You need to make sure that the security group has the appropriate port enabled.
            ``` 
                python3 -m virtualenv venv
@@ -92,16 +93,19 @@
                python app.py 
                ```
       - The database is not configured.The database is not configured. I'm going to directory named db and I run the next commands
+        
             ``` sudo chmod +x set-root-user.sh createdb.sh
                 sudo ./set-root-user.sh
                 sudo ./createdb.sh 
                 ```
       - You can check if the database was created running the next command:
+      - 
             ``` sudo mysql 
                 show databases;
                 use books_db;
                 show tables;
                 SELECT * FROM Books; ```
+        
       - The database is not configured in AWS RDS but in AWS EC2. So in the next step, I'm going to configure AWS RDS.
       
 <hr>
