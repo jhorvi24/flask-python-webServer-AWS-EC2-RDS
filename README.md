@@ -79,7 +79,7 @@
            pip install boto3
             ```
       - When the instance launch is finished, I connect to the terminal, and I clone this project using the respective URL:
-           ``` git clone *URL** ```
+           ```sh git clone *URL** ```
       - To run the web server, I run the next command in the directory where the app.py is located. You need to make sure that the security group has the appropriate port enabled.
            ``` 
                python3 -m virtualenv venv
