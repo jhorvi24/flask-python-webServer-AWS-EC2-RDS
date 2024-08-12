@@ -42,6 +42,7 @@
          - SSMFullAccess           
 
 <hr>
+
 3. I going to the AWS EC2 service and I create two security group.
 
       - The first security group has the next parameters:
