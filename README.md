@@ -52,7 +52,7 @@
             - Port Range: 5000
             - Source: Anywhere
             
-       - The second security group has the next parameters:
+      - The second security group has the next parameters:
        
          - Name: database-SG
          - Inboud rules:
