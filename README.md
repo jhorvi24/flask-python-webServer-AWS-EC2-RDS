@@ -44,7 +44,7 @@
 <hr>
 3. I going to the AWS EC2 service and I create two security group.
 
-      -The first security group has the next parameters:
+      - The first security group has the next parameters:
       
          - Name: web-server-SG
          - Inboud rules:
@@ -58,7 +58,7 @@
          - Inboud rules:
             - Type: MYSQL/Aurora
             - Port Range: 3306
-            - Source: web-server-SG (*The SG of the web server*)
+            - Source: web-server-SG *The SG of the web server*
 <hr>
 4. I going to the AWS EC2 service and I launch an EC2 instance in the **PublicSubnet** with the next configurations
      - AMI: *Amazon Linux 2023*
