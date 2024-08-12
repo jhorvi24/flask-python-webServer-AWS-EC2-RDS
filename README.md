@@ -84,9 +84,20 @@
            ``` python3 -m virtualenv venv
                source venv/bin/activate
                python app.py ```
-      - The database is not configured. 
-      - The database is not configured in AWS RDS. So in the next step, I'm going to configure AWS RDS.
+      - The database is not configured.The database is not configured. I'm going to directory named db and I run the next commands
+            ``` sudo chmod +x set-root-user.sh createdb.sh
+                sudo ./set-root-user.sh
+                sudo ./createdb.sh ```
+      - You can check if the database was created running the next command:
+            ``` sudo mysql 
+                show databases;
+                use books_db;
+                show tables;
+                SELECT * FROM Books; ```
+      - The database is not configured in AWS RDS but in AWS EC2. So in the next step, I'm going to configure AWS RDS.
+      
    <hr>
+   
 5. I'm going to the AWS RDS to configure the relational database service.
          - I create a subnet group for privateSubnetA and privateSubnetB.
          - I create AWS RDS with the next parameters:
@@ -100,7 +111,21 @@
                - Associate the database security group create in the step three.
 
             - When AWS RDS is finally created, I copy the RDS endpoint. You can update the /book/host parameter in AWS System Manager.
-6. In this step
+
+6. In this step, I'll be migrating the database on AWS EC2 to AWS RDS.
+         - From the terminal of the AWS EC2 instance, I run the next commands:
+         - I check the connection to AWS RDS from AWS EC2
+         ``` mysql -u root -p --host *rds-endpoint*
+             show databases; ```
+         - I begin with the migration with the next commands:
+         ``` mysqldump --databases books_db -u root -p > bookDB.sql
+             mysql -u root -p --host *rds-endpoint* < bookDB.sql ```
+         - You can check if the migration was successful
+          ``` mysql -u root -p --host *rds-endpoint*
+             show databases;
+             show tables;
+             SELECT * FROM Books;  ```
+   
               
        
          
