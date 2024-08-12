@@ -81,13 +81,16 @@
       - When the instance launch is finished, I connect to the terminal, and I clone this project using the respective URL:
            ``` git clone *URL** ```
       - To run the web server, I run the next command in the directory where the app.py is located. You need to make sure that the security group has the appropriate port enabled.
-           ``` python3 -m virtualenv venv
+           ``` 
+               python3 -m virtualenv venv
                source venv/bin/activate
-               python app.py ```
+               python app.py 
+               ```
       - The database is not configured.The database is not configured. I'm going to directory named db and I run the next commands
             ``` sudo chmod +x set-root-user.sh createdb.sh
                 sudo ./set-root-user.sh
-                sudo ./createdb.sh ```
+                sudo ./createdb.sh 
+                ```
       - You can check if the database was created running the next command:
             ``` sudo mysql 
                 show databases;
