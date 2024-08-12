@@ -65,6 +65,19 @@
            pip install mysql-connector-python
            pip install boto3
             ```
+      - When the instance launch is finished, I connect to the terminal, and I clone this project using the respective URL:
+           ``` git clone *URL** ```
+      - To run the web server, I run the next command in the directory where the app.py is located. You need to make sure that the security group has the appropriate port enabled.
+           ``` python3 -m virtualenv venv
+               source venv/bin/activate
+               python app.py ```
+      - The database is not configured in AWS RDS. So in the next step, I'm going to configure AWS RDS.
+   <hr>
+   4. I'm going to the AWS RDS to configure the relational database service.
+      - I create a subnet group for privateSubnetA and privateSubnetB.
+      - 
+              
+       
          
 
     
