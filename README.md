@@ -96,9 +96,10 @@
                 SELECT * FROM Books; ```
       - The database is not configured in AWS RDS but in AWS EC2. So in the next step, I'm going to configure AWS RDS.
       
-   <hr>
+<hr>
    
 5. I'm going to the AWS RDS to configure the relational database service.
+   
          - I create a subnet group for privateSubnetA and privateSubnetB.
          - I create AWS RDS with the next parameters:
             - Engine Type: MariaDB or MySQL
@@ -112,15 +113,21 @@
 
             - When AWS RDS is finally created, I copy the RDS endpoint. You can update the /book/host parameter in AWS System Manager.
 
-6. In this step, I'll be migrating the database on AWS EC2 to AWS RDS.
+7. In this step, I'll be migrating the database on AWS EC2 to AWS RDS.
+   
          - From the terminal of the AWS EC2 instance, I run the next commands:
          - I check the connection to AWS RDS from AWS EC2
+   
          ``` mysql -u root -p --host *rds-endpoint*
              show databases; ```
+   
          - I begin with the migration with the next commands:
+   
          ``` mysqldump --databases books_db -u root -p > bookDB.sql
              mysql -u root -p --host *rds-endpoint* < bookDB.sql ```
+   
          - You can check if the migration was successful
+   
           ``` mysql -u root -p --host *rds-endpoint*
              show databases;
              show tables;
