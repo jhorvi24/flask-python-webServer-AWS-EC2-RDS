@@ -118,17 +118,17 @@
    - I create a subnet group for privateSubnetA and privateSubnetB.
    - I create AWS RDS with the next parameters:
    
-            - Engine Type: MariaDB or MySQL
-            - Templates: Free tier
-            - Master username: the same user that you created in AWS System Manager
-            - Master Password: the same password that you created in AWS System Manager.
-            - Virtual Private Cloud (VPC): the VPC that was created in the step one. 
-            - DB subnet group: the db subnet group created. 
-            - Existing VPC security groups:
+          - Engine Type: MariaDB or MySQL
+          - Templates: Free tier
+          - Master username: the same user that you created in AWS System Manager
+          - Master Password: the same password that you created in AWS System Manager.
+          - Virtual Private Cloud (VPC): the VPC that was created in the step one. 
+          - DB subnet group: the db subnet group created. 
+          - Existing VPC security groups:
    
-               - Associate the database security group create in the step three.
+              - Associate the database security group create in the step three.
 
-            - When AWS RDS is finally created, I copy the RDS endpoint. You can update the /book/host parameter in AWS System Manager.
+          - When AWS RDS is finally created, I copy the RDS endpoint. You can update the /book/host parameter in AWS System Manager.
 
 7. In this step, I'll be migrating the database on AWS EC2 to AWS RDS.
    
