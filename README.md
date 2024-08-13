@@ -86,7 +86,9 @@
             ```
       - When the instance launch is finished, I connect to the terminal, and I clone this project using the respective URL:
         
-           ```git clone URL```
+           ```
+           git clone URL
+           ```
         
       - To run the web server, I run the next command in the directory where the app.py is located. You need to make sure that the security group has the appropriate port enabled.
 
@@ -115,6 +117,7 @@
    
          - I create a subnet group for privateSubnetA and privateSubnetB.
          - I create AWS RDS with the next parameters:
+   
             - Engine Type: MariaDB or MySQL
             - Templates: Free tier
             - Master username: the same user that you created in AWS System Manager
@@ -122,6 +125,7 @@
             - Virtual Private Cloud (VPC): the VPC that was created in the step one. 
             - DB subnet group: the db subnet group created. 
             - Existing VPC security groups:
+   
                - Associate the database security group create in the step three.
 
             - When AWS RDS is finally created, I copy the RDS endpoint. You can update the /book/host parameter in AWS System Manager.
