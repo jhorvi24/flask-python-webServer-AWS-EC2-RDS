@@ -135,20 +135,21 @@
    
    - From the terminal of the AWS EC2 instance, I run the next commands:
    - I check the connection to AWS RDS from AWS EC2
-   ``` mysql -u root -p --host *rds-endpoint*
-       show databases; ```
+      ``` mysql -u root -p --host rds-endpoint
+          show databases;
+      ```
    
    - I begin with the migration with the next commands:
    
-   ``` mysqldump --databases books_db -u root -p > bookDB.sql
-       mysql -u root -p --host *rds-endpoint* < bookDB.sql ```
+             mysqldump --databases books_db -u root -p > bookDB.sql
+             mysql -u root -p --host *rds-endpoint* < bookDB.sql
    
    - You can check if the migration was successful
    
-          ``` mysql -u root -p --host *rds-endpoint*
+             mysql -u root -p --host *rds-endpoint*
              show databases;
              show tables;
-             SELECT * FROM Books;  ```
+             SELECT * FROM Books; 
    
               
        
