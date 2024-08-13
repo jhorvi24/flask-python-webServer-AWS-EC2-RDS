@@ -101,11 +101,11 @@
                 sudo ./createdb.sh
       - You can check if the database was created running the next command:
       - 
-            ``` sudo mysql 
+                sudo mysql 
                 show databases;
                 use books_db;
                 show tables;
-                SELECT * FROM Books; ```
+                SELECT * FROM Books; 
         
       - The database is not configured in AWS RDS but in AWS EC2. So in the next step, I'm going to configure AWS RDS.
       
