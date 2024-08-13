@@ -1,5 +1,5 @@
 # Deploy a web server made in Python using the Flask framework on AWS EC2 and a MySQL database on AWS RDS.
-![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white) ![AWS2](https://img.icons8.com/?size=100&id=33039&format=png&color=000000)
 
 ## I'm going to deploy the next cloud architecture on AWS
 ![arquitectura aws](img/EC2-RDS.svg)
