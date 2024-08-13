@@ -129,14 +129,16 @@
             - Associate the database security group create in the step three.
 
          - When AWS RDS is finally created, I copy the RDS endpoint. You can update the /book/host parameter in AWS System Manager.
+<hr>
 
 7. In this step, I'll be migrating the database on AWS EC2 to AWS RDS.
    
    - From the terminal of the AWS EC2 instance, I run the next commands:
    - I check the connection to AWS RDS from AWS EC2
-      ``` mysql -u root -p --host rds-endpoint
-          show databases;
-      ```
+     
+             mysql -u root -p --host rds-endpoint
+             show databases;
+   
    
    - I begin with the migration with the next commands:
    
