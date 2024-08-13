@@ -115,8 +115,8 @@
    
 5. I'm going to the AWS RDS to configure the relational database service.
    
-         - I create a subnet group for privateSubnetA and privateSubnetB.
-         - I create AWS RDS with the next parameters:
+   - I create a subnet group for privateSubnetA and privateSubnetB.
+   - I create AWS RDS with the next parameters:
    
             - Engine Type: MariaDB or MySQL
             - Templates: Free tier
