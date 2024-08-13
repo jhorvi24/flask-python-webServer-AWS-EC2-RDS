@@ -117,33 +117,33 @@
    
    - I create a subnet group for privateSubnetA and privateSubnetB.
    - I create AWS RDS with the next parameters:
+      -    
    
-          - Engine Type: MariaDB or MySQL
-          - Templates: Free tier
-          - Master username: the same user that you created in AWS System Manager
-          - Master Password: the same password that you created in AWS System Manager.
-          - Virtual Private Cloud (VPC): the VPC that was created in the step one. 
-          - DB subnet group: the db subnet group created. 
-          - Existing VPC security groups:
-   
-              - Associate the database security group create in the step three.
+      - Engine Type: MariaDB or MySQL
+      - Templates: Free tier
+        
+         - Master username: the same user that you created in AWS System Manager
+         - Master Password: the same password that you created in AWS System Manager.
+         - Virtual Private Cloud (VPC): the VPC that was created in the step one. 
+         - DB subnet group: the db subnet group created. 
+         - Existing VPC security groups:
+            - Associate the database security group create in the step three.
 
-          - When AWS RDS is finally created, I copy the RDS endpoint. You can update the /book/host parameter in AWS System Manager.
+         - When AWS RDS is finally created, I copy the RDS endpoint. You can update the /book/host parameter in AWS System Manager.
 
 7. In this step, I'll be migrating the database on AWS EC2 to AWS RDS.
    
-         - From the terminal of the AWS EC2 instance, I run the next commands:
-         - I check the connection to AWS RDS from AWS EC2
+   - From the terminal of the AWS EC2 instance, I run the next commands:
+   - I check the connection to AWS RDS from AWS EC2
+   ``` mysql -u root -p --host *rds-endpoint*
+       show databases; ```
    
-         ``` mysql -u root -p --host *rds-endpoint*
-             show databases; ```
+   - I begin with the migration with the next commands:
    
-         - I begin with the migration with the next commands:
+   ``` mysqldump --databases books_db -u root -p > bookDB.sql
+       mysql -u root -p --host *rds-endpoint* < bookDB.sql ```
    
-         ``` mysqldump --databases books_db -u root -p > bookDB.sql
-             mysql -u root -p --host *rds-endpoint* < bookDB.sql ```
-   
-         - You can check if the migration was successful
+   - You can check if the migration was successful
    
           ``` mysql -u root -p --host *rds-endpoint*
              show databases;
