@@ -134,7 +134,7 @@ In this guide, I'll configure a Virtual Private Cloud (VPC) to deploy a web serv
          - When AWS RDS is finally created, I copy the RDS endpoint. You can update the /book/host parameter in AWS System Manager.
 <hr>
 
-7. In this step, I'll be migrating the database on AWS EC2 to AWS RDS.
+6. In this step, I'll be migrating the database on AWS EC2 to AWS RDS.
    
    - From the terminal of the AWS EC2 instance, I run the next commands:
    - I check the connection to AWS RDS from AWS EC2
@@ -157,7 +157,7 @@ In this guide, I'll configure a Virtual Private Cloud (VPC) to deploy a web serv
    
 <hr>
 
-8. Finally, you can test whether the application connects to the database in AWS RDS.
+7. Finally, you can test whether the application connects to the database in AWS RDS.
    
  
        
