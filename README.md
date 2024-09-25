@@ -100,7 +100,7 @@ In this guide, I'll configure a Virtual Private Cloud (VPC) to deploy a web serv
                source venv/bin/activate
                python app.py 
                
-      - The database is not configured.The database is not configured. I'm going to directory named db and I run the next commands
+      - The database is not configured. I'm going to directory named db and I run the next commands
         
                 sudo chmod +x set-root-user.sh createdb.sh
                 sudo ./set-root-user.sh
