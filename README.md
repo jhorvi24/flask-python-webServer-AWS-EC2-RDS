@@ -1,4 +1,7 @@
-# Deploy a web server written in Python on AWS EC2 and a MySQL database on AWS RDS.
+# Configure a VPC to Deploy a Web Server and Database on AWS
+
+In this guide, I'll configure a Virtual Private Cloud (VPC) to deploy a web server, written in Python, on an Amazon EC2 instance within a public subnet, and a MySQL database on AWS RDS within two private subnets.
+
 ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
 
 ## I'm going to deploy the next cloud architecture on AWS
@@ -153,7 +156,11 @@
              show tables;
              SELECT * FROM Books; 
    
-              
+<hr>
+
+8. You can test whether the application connects to the database in AWS RDS.
+   
+ 
        
          
 
