@@ -157,7 +157,7 @@ In this guide, I'll configure a Virtual Private Cloud (VPC) to deploy a web serv
    
 <hr>
 
-8. You can test whether the application connects to the database in AWS RDS.
+8. Finally, you can test whether the application connects to the database in AWS RDS.
    
  
        
