@@ -106,7 +106,7 @@ In this guide, I'll configure a Virtual Private Cloud (VPC) to deploy a web serv
                 sudo ./set-root-user.sh
                 sudo ./createdb.sh
       - You can check if the database was created running the next command:
-      - 
+        
                 sudo mysql 
                 show databases;
                 use books_db;
@@ -129,8 +129,7 @@ In this guide, I'll configure a Virtual Private Cloud (VPC) to deploy a web serv
          - Master Password: the same password that you created in AWS System Manager.
          - Virtual Private Cloud (VPC): the VPC that was created in the step one. 
          - DB subnet group: the db subnet group created. 
-         - Existing VPC security groups:
-            - Associate the database security group create in the step three.
+         - Existing VPC security groups: Associate the database security group create in the step three.
 
          - When AWS RDS is finally created, I copy the RDS endpoint. You can update the /book/host parameter in AWS System Manager.
 <hr>
